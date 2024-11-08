@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "name": "kanbas-node-server-app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
