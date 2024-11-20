@@ -24,7 +24,8 @@ if (process.env.NODE_ENV !== "development") {
     console.log("NODE SERVER DOMAIN"+process.env.NODE_SERVER_DOMAIN)
     sessionOptions.proxy = true;
     sessionOptions.cookie = {
-      sameSite: "none",
+    //   sameSite: "none",
+    sameSite:'None',
       secure: true,
       domain: process.env.NODE_SERVER_DOMAIN,
     };
