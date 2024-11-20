@@ -21,6 +21,7 @@ const sessionOptions = {
     saveUninitialized: false,
 };
 if (process.env.NODE_ENV !== "development") {
+    console.log("NODE SERVER DOMAIN"+env.NODE_SERVER_DOMAIN)
     sessionOptions.proxy = true;
     sessionOptions.cookie = {
       sameSite: "none",
