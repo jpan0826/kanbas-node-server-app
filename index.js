@@ -5,6 +5,7 @@ import cors from "cors";
 import UserRoutes from "./Kanbas/Users/routes.js";
 import CourseRoutes from './Kanbas/Courses/routes.js';
 import ModuleRoutes from './Kanbas/Modules/routes.js';
+import AssignmentRoutes from './Kanbas/Assignments/routes.js';
 import session from "express-session";
 import "dotenv/config";
 
@@ -21,7 +22,6 @@ const sessionOptions = {
     saveUninitialized: false,
 };
 if (process.env.NODE_ENV !== "development") {
-    console.log("NODE SERVER DOMAIN"+process.env.NODE_SERVER_DOMAIN)
     sessionOptions.proxy = true;
     sessionOptions.cookie = {
       sameSite: "none",
@@ -40,5 +40,6 @@ CourseRoutes(app);
 Hello(app);
 Lab5(app);
 ModuleRoutes(app);
+AssignmentRoutes(app);
 
 app.listen(process.env.PORT || 4000)
