@@ -7,7 +7,7 @@ export function findCoursesForEnrolledUser(userId) {
     const { courses, enrollments } = Database;
     const enrolledCourses = courses.filter((course) =>
         enrollments.some((enrollment) => enrollment.user === userId && enrollment.course === course._id));
-    return enrolledCourses;
+    return enrolledCourses.sort((a, b) => a.name.localeCompare(b.name));
 }
 
 export function createCourse(course) {
