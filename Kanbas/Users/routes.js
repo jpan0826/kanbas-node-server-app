@@ -125,7 +125,7 @@ export default function UserRoutes(app) {
         res.json(user);
       };
     app.post("/api/users", createUser);
-    
+
     app.get("/api/users", findAllUsers);
     app.get("/api/users/:userId", findUserById);
     app.put("/api/users/:userId", updateUser);
